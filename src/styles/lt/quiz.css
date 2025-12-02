@@ -1,0 +1,91 @@
+.option-row {
+    margin: 12px 0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.03);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.option-row:hover {
+    background: rgba(32, 209, 100, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(32, 209, 100, 0.35);
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.option-label input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: 
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.15s ease;
+}
+
+.option-label input[type="radio"]:hover {
+    box-shadow: 0 0 10px rgba(32, 209, 100, 0.6);
+}
+
+.option-label input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(32, 209, 100, 0.75);
+}
+
+.option-label input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: center;
+    transition: transform 0.25s cubic-bezier(0.25, 1.3, 0.4, 1);
+}
+
+.option-label input[type="radio"]:checked {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 14px rgba(32, 209, 100, 0.7);
+    transform: scale(1.05);
+}
+
+.option-label input[type="radio"]:checked::before {
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.option-text {
+    font-size: 16px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.4s ease;
+}
+

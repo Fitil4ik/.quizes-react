@@ -2,8 +2,11 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
-import './styles/main.css'
-import './styles/quiz.css'
+import { initTheme, getSavedTheme } from './utils/themeSwitcher'
+
+if (typeof window !== 'undefined') {
+  initTheme(getSavedTheme())
+}
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
