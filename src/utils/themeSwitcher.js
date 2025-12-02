@@ -19,7 +19,6 @@ function ensureLink(id, href) {
 
 export function initTheme(defaultTheme = 'light') {
   if (typeof document === 'undefined') return
-  // create both dark and light links for each pair and disable one
   PAIRS.forEach(p => {
     const darkId = `app-${p.name}-dark`
     const lightId = `app-${p.name}-light`

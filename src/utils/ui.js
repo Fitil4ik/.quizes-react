@@ -1,6 +1,5 @@
 export const ui = {
   showMessage(message, type = 'info') {
-    // simple flash message
     const div = document.createElement('div')
     div.className = `message ${type} fade-in`
     div.textContent = message
