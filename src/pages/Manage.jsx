@@ -31,7 +31,7 @@ export default function Manage() {
 
   return (
     <div>
-      <h2>Керувати вікторинами</h2>
+      <h2>Керування вікторинами</h2>
       <div className="search-bar">
         <input placeholder="Шукати..." onChange={e => filterQuizzes(e.target.value)} />
       </div>

@@ -1,6 +1,8 @@
 # Quizzes (React)
 
-cd 'C:\Users\Evgen\Documents\.quizes-react'
+У Powershell:
+
+cd '*\\.quizes-react'
 
 & npm.cmd install
 
