@@ -2,7 +2,7 @@
 
 У Powershell:
 
-cd '*\.quizes-react'
+cd '*\\.quizes-react'
 
 & npm.cmd install
 
