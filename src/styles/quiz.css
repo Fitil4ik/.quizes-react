@@ -1,16 +1,28 @@
+@keyframes neonFullRGB {
+    0%   { color: rgb(0,255,255); border-color: rgb(0,255,255); box-shadow: 0 0 10px rgb(0,255,255); }
+    15%  { color: rgb(0,170,255); border-color: rgb(0,170,255); box-shadow: 0 0 10px rgb(0,170,255); }
+    30%  { color: rgb(120,0,255); border-color: rgb(120,0,255); box-shadow: 0 0 10px rgb(120,0,255); }
+    45%  { color: rgb(255,0,140); border-color: rgb(255,0,140); box-shadow: 0 0 10px rgb(255,0,140); }
+    60%  { color: rgb(255,80,0); border-color: rgb(255,80,0); box-shadow: 0 0 10px rgb(255,80,0); }
+    75%  { color: rgb(255,255,0); border-color: rgb(255,255,0); box-shadow: 0 0 10px rgb(255,255,0); }
+    90%  { color: rgb(0,255,0); border-color: rgb(0,255,0); box-shadow: 0 0 10px rgb(0,255,0); }
+    100% { color: rgb(0,255,255); border-color: rgb(0,255,255); box-shadow: 0 0 10px rgb(0,255,255); }
+}
+
 .option-row {
     margin: 12px 0;
     padding: 12px 16px;
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.03);
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.25s ease;
     cursor: pointer;
+    border: 2px solid;
+    animation: neonFullRGB 4s infinite linear;
+    transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .option-row:hover {
-    background: rgba(32, 209, 100, 0.08);
     transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(32, 209, 100, 0.35);
+    animation-duration: 1.6s;
 }
 
 .option-label {
@@ -19,6 +31,8 @@
     gap: 14px;
     cursor: pointer;
     user-select: none;
+
+    animation: neonFullRGB 4s infinite linear;
 }
 
 .option-label input[type="radio"] {
@@ -26,10 +40,13 @@
     -webkit-appearance: none;
     width: 22px;
     height: 22px;
-    border: 2px solid var(--primary-color);
+    border: 2px solid;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
+
+    animation: neonFullRGB 3s infinite linear;
+
     transition: 
         box-shadow 0.25s ease,
         border-color 0.25s ease,
@@ -38,12 +55,13 @@
 }
 
 .option-label input[type="radio"]:hover {
-    box-shadow: 0 0 10px rgba(32, 209, 100, 0.6);
+    transform: scale(1.12);
+    animation-duration: 1.4s;
 }
 
 .option-label input[type="radio"]:focus {
     outline: none;
-    box-shadow: 0 0 12px rgba(32, 209, 100, 0.75);
+    transform: scale(1.16);
 }
 
 .option-label input[type="radio"]::before {
@@ -51,7 +69,9 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    background: var(--primary-color);
+
+    background: currentColor;
+
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -61,9 +81,8 @@
 }
 
 .option-label input[type="radio"]:checked {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 14px rgba(32, 209, 100, 0.7);
-    transform: scale(1.05);
+    transform: scale(1.20);
+    animation-duration: 1.3s;
 }
 
 .option-label input[type="radio"]:checked::before {
@@ -72,4 +91,6 @@
 
 .option-text {
     font-size: 16px;
+
+    animation: neonFullRGB 4s infinite linear;
 }

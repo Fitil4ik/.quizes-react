@@ -4,4 +4,4 @@ cd 'C:\Users\Evgen\Documents\.quizes-react'
 
 & npm.cmd install
 
-& npm.cmd run dev
+&npm.cmd run dev 
